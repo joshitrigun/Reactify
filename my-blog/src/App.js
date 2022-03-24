@@ -4,13 +4,17 @@ import AboutPage from './pages/AboutPage';
 import ArticlesList from './pages/ArticlesList';
 import ArticlePage from './pages/ArticlePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar';
 import './App.css';
-
 function App() {
-  return (
+  return (<>
+
+
     <div className='App'>
+
       <div id="page-body">
         <Router>
+          <NavBar />
           <Routes>
 
             <Route path="/" element={<HomePage />} exact />
@@ -22,6 +26,7 @@ function App() {
         </Router>
       </div>
     </div >
+  </>
   );
 }
 
